@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aquamarine;
+    padding: 17px 0px 25px;
+}
+fieldset{
+    text-align: center;
+    display:block;
+    margin-bottom: 12px;
+}
+form{
+    margin: 20px 20% 15px;
+    text-align: center;
+    background-color: rgb(5, 143, 132);
+    padding: 20px 10% 50px;
+    border-radius: 2%;
+}
+label{
+    font-size: large;
+    display: inline-block;
+    margin: 25px;
+    background-color: aqua;
+    padding: 8px;
+    border-radius: 20%;
+}
+#mailing{
+    text-align: left;
+}
+#submit{
+    font-size: larger;
+}

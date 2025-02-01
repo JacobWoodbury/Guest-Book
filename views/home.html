@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+    <link rel="icon" type = "image/gif" href="images/friendship.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome friends!</h1>
+        <h3>Add your information below to stay in touch.</h3>
+    </header>
+    
+    <form action="newFriend" method="post">
+        <fieldset>
+            <legend>Contact Form</legend>    
+            <label>First Name: 
+                <input type="text" name="fname">
+            </label>
+            <label>Last Name: 
+                <input type="text" name="lname">
+            </label>
+            <label>Job Title: 
+                <input type="text" name="job">
+            </label>
+            <label>Company: 
+                <input type="text" name="company">
+            </label>
+            <label>Linkedin URL: 
+                <input type="text" name="linkedin">
+            </label> 
+            <label>Email Address: 
+                <input type="text" name="email">
+            </label>     
+        </fieldset>
+
+        <fieldset>
+            <legend>Where did we meet?</legend>
+            <select name ="meet">
+                <option value="school">School</option>
+                <option value="work">Work</option>
+                <option value="party">Party</option>
+            </select>
+            <label>Or write in an answer:
+                <input type="text" name="meetOther">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label>Message
+            <input type="text" name="message">
+        </label>
+    </fieldset>
+        <fieldset id="mailing">
+            <label>Add to our mailing list?
+                <input type="checkbox" name="addMail">Yes!
+            </label>
+            <label>Choose a format:
+                <input type ="radio" name="format" value="html">HTML
+            </label>
+
+            <label>
+                <input type="radio" name="format" value="tet">Text
+            </label>
+        </fieldset>
+<button id="submit" type="submit">Submit</button>
+     </form>
+     
+     <a href="https://www.flaticon.com/free-animated-icons/friend" title="friend animated icons">Friend animated icons created by Freepik - Flaticon</a>
+</body>
+</html>
