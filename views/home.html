@@ -49,8 +49,12 @@
         </fieldset>
 
         <fieldset>
-            <label>Message
-            <input type="text" name="message">
+            <label id="message">Message
+                <!-- I had to look this one up, I tried a lot of fixes and couldn't get the text to wrap. hopefully this is more what you are looking for 
+                 original: <input id="text-box" type="text" name="message"> 
+                 I see textarea mentioned in the pizza css but I'm not sure what its referencing-->
+                <textarea id="text-box" name="message"></textarea>
+            </label>
         </label>
     </fieldset>
         <fieldset id="mailing">
@@ -59,9 +63,6 @@
             </label>
             <label>Choose a format:
                 <input type ="radio" name="format" value="html">HTML
-            </label>
-
-            <label>
                 <input type="radio" name="format" value="tet">Text
             </label>
         </fieldset>
