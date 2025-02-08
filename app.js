@@ -37,6 +37,9 @@ app.get('/newFriend', (req, res) =>{
     
  });
 
+ app.get('/admin/friends', (req, res) =>{
+    res.send(friends);
+ });
  
 
 //Tell the server to listen
