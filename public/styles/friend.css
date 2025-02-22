@@ -17,7 +17,7 @@ h1{
     color: white;
 }
 #go-home{
-    text-align: center;
+    float: right;
 }
 
 .friend{

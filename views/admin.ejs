@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type = "image/gif" href="images/friendship.gif">
+    <link rel="stylesheet" href="styles/friend.css">
+    <title>Admin</title>
+</head>
+<body>
+
+    
+    
+    <div class="friend"> 
+        <ul>
+            <% friends.forEach(friend => { %>
+            
+          
+                    <li>Name:<%= friend.fname %> <%= friend.lname %></li>
+            
+          
+                    <li>Job: <span><%= friend.job %>, <%= friend.company %></span></li>
+                    <li>LinkedIn: <span><%=  friend.linkedin %></span></li>
+                    <li>Email: <span><%= friend.email %></span></li>
+               
+                    <li>Met: <span><%= friend.meet %></span></li>
+                    <li>Message: <span><%= friend.message %></span></li>
+                    <li>Mailing List: <span><%= friend.addMail %></span></li>
+      
+        
+                <li><%= friend.timestamp.toString() %></li>
+            
+
+                <p></p>
+            <% }) %>
+        </ul>
+
+    
+        
+    
+
+
+    <div id="go-home">
+        <a id="return" href="/" class="button">Back to Home</a>
+    </div>
+    
+
+
+    
+</body>
+</html>

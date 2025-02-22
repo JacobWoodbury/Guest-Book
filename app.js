@@ -15,9 +15,6 @@ const friends = [];
 app.get('/', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
-app.get('/newFriend', (req, res) =>{
-    res.sendFile(`${import.meta.dirname}/views/newFriend.html`)
-});
 
 //posting to my array and redirecting to friend page
  app.post('/newFriend', (req, res) =>{
@@ -36,7 +33,7 @@ app.get('/newFriend', (req, res) =>{
         timestamp: new Date()
     };
     if (friend.fname.trim() === "" || friend.lname.trim() === "" || friend.email.trim() === "") {
-        res.send("Invalid name/email");
+        res.send("Invalid input");
         return;
     }
     friends.push(friend);
@@ -45,8 +42,8 @@ app.get('/newFriend', (req, res) =>{
     
  });
 
- app.get('/admin/friends', (req, res) =>{
-    res.send(friends);
+ app.get('/admin', (req, res) =>{
+    res.render('admin', {friends})
  });
  
 
