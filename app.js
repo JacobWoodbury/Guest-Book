@@ -1,12 +1,15 @@
 //express
 import express from 'express';
 const app = express();
+
+const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //declarations
 const friends = [];
-const PORT = 3000;
+
 
 //page paths
 app.get('/', (req, res) => {
@@ -29,11 +32,16 @@ app.get('/newFriend', (req, res) =>{
         meetOther: req.body.meetOther,
         message: req.body.message,
         addMail: req.body.addMail,
-        format: req.body.format
+        format: req.body.format,
+        timestamp: new Date()
     };
+    if (friend.fname.trim() === "" || friend.lname.trim() === "" || friend.email.trim() === "") {
+        res.send("Invalid name/email");
+        return;
+    }
     friends.push(friend);
     console.log(friends)
-    res.sendFile(`${import.meta.dirname}/views/newFriend.html`);
+    res.render('newFriend', {friend});
     
  });
 

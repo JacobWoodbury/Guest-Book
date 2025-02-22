@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type = "image/gif" href="images/friendship.gif">
+    <link rel="stylesheet" href="styles/friend.css">
+    <title>Thank you!</title>
+</head>
+<body>
+    <h1><%= friend.fname %> <%= friend.lname %>,  you're my friend!</h1>
+    
+    <div class="friend">
+        <div>
+            <p>Job: <span><%= friend.job %>, <%= friend.company %></span></p>
+            <p>LinkedIn: <span><%=  friend.linkedin %></span></p>
+            <p>Email: <span><%= friend.email %></span></p>
+        </div>
+        <div>
+            <p>Met: <span><%= friend.meet %></span></p>
+            <p>Message: <span><%= friend.message %></span></p>
+            <p>Mailing List: <span><%= friend.addMail %></span></p>
+        </div>
+
+        <p><%= friend.timestamp.toString() %></p>
+        </div>
+    
+
+
+    <div id="go-home">
+        <a id="return" href="/" class="button">Back to Home</a>
+    </div>
+
+
+    
+</body>
+</html>
